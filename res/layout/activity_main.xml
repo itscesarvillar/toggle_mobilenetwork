@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/hello_world" />
+
+    <Switch
+        android:id="@+id/mobileData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Mobile data" 
+        android:onClick="handleMobileInterface"/>
+
+    <Button
+        android:id="@+id/setting_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mobileData"
+        android:layout_marginTop="34dp"
+        android:text="Testing menu" 
+        android:onClick="showTestingMenu"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setting_test"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/sendMsg"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2G preferred"
+            android:onClick="set2g" />
+
+        <Button
+            android:id="@+id/startIntentService"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3G preferred"
+            android:onClick="set3g" />
+        
+    </LinearLayout>
+
+</RelativeLayout>
